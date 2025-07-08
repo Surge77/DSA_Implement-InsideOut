@@ -342,16 +342,3 @@ class DoublyLinkedList:
       # Swap head and tail
       self.head, self.tail = self.tail, self.head
 
-
-if __name__ == "__main__":
-    dll = DoublyLinkedList()
-    for val in ["a", "b", "c", "d"]:
-        dll.append(val)
-
-    print("Before reverse:", dll)  # a <-> b <-> c <-> d <-> None
-    dll.reverse()
-    print("After reverse: ", dll)  # d <-> c <-> b <-> a <-> None
-
-    # Another reverse to get back original
-    dll.reverse()
-    print("Back to original:", dll)  # a <-> b <-> c <-> d <-> None

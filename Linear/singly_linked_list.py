@@ -346,18 +346,3 @@ class SinglyLinkedList:
 
 
 
-if __name__ == "__main__":
-    ll = SinglyLinkedList()
-    ll.append(1)
-    ll.append(2)
-    ll.append(3)
-    ll.append(4)
-
-    print("Original list:", ll)  # 1 -> 2 -> 3 -> 4 -> None
-
-    ll.reverse()
-
-    print("Reversed list:", ll)  # 4 -> 3 -> 2 -> 1 -> None
-    print("New head:", ll.head.value)  # 4
-    print("New tail:", ll.tail.value)  # 1
-
