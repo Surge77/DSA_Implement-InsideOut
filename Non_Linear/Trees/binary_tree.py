@@ -143,16 +143,16 @@ class BinaryTree:
 
     def search(self, target: int) -> bool:
         """
-          Searches for a value in the binary tree using level-order traversal.
+        Searches for a value in the binary tree using level-order traversal.
 
-          Args:
-              target (int): The value to search for.
+        Args:
+            target (int): The value to search for.
 
-          Returns:
-              bool: True if found, False otherwise.
+        Returns:
+            bool: True if found, False otherwise.
 
-          Time Complexity: O(n)
-          Space Complexity: O(n)
+        Time Complexity: O(n)
+        Space Complexity: O(n)
         """
         if not self.root:
             return False
@@ -176,13 +176,13 @@ class BinaryTree:
 
     def height(self) -> int:
         """
-          Calculates the height of the binary tree.
+        Calculates the height of the binary tree.
 
-          Returns:
-              int: Height of the tree (0 if empty).
+        Returns:
+            int: Height of the tree (0 if empty).
 
-          Time Complexity: O(n)
-          Space Complexity: O(h) — due to recursion stack (h = height of tree)
+        Time Complexity: O(n)
+        Space Complexity: O(h) — due to recursion stack (h = height of tree)
         """
         def _height(node: Node) -> int:
             if not node:
@@ -197,17 +197,17 @@ class BinaryTree:
 
     def delete(self, target: int) -> bool:
         """
-          Deletes a node by value using level-order logic.
-          Replaces the node with the deepest rightmost node.
+        Deletes a node by value using level-order logic.
+        Replaces the node with the deepest rightmost node.
 
-          Args:
-              target (int): Value to delete.
+        Args:
+            target (int): Value to delete.
 
-          Returns:
-              bool: True if deletion successful, False otherwise.
+        Returns:
+            bool: True if deletion successful, False otherwise.
 
-          Time Complexity: O(n)
-          Space Complexity: O(n)
+        Time Complexity: O(n)
+        Space Complexity: O(n)
         """
         if not self.root:
             return False
@@ -256,15 +256,15 @@ class BinaryTree:
 
     def count_leaf_nodes(self) -> int:
         """
-          Counts the number of leaf nodes in the binary tree.
+        Counts the number of leaf nodes in the binary tree.
 
-          A leaf node is defined as a node with no left or right children.
+        A leaf node is defined as a node with no left or right children.
 
-          Returns:
-              int: Total number of leaf nodes.
+        Returns:
+            int: Total number of leaf nodes.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h) — due to recursion stack (h = height of tree)
+        Time Complexity: O(n)
+        Space Complexity: O(h) — due to recursion stack (h = height of tree)
         """
         def _count_leaves(node: Node) -> int:
             if not node:
@@ -279,16 +279,16 @@ class BinaryTree:
     
     def diameter(self) -> int:
         """
-          Calculates the diameter of the binary tree.
+        Calculates the diameter of the binary tree.
 
-          Diameter is defined as the number of nodes on the longest path
-          between any two nodes in the tree.
+        Diameter is defined as the number of nodes on the longest path
+        between any two nodes in the tree.
 
-          Returns:
-              int: Diameter of the tree.
+        Returns:
+            int: Diameter of the tree.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h) — h = height of tree (recursion stack)
+        Time Complexity: O(n)
+        Space Complexity: O(h) — h = height of tree (recursion stack)
         """
         self.max_diameter = 0
 
@@ -314,10 +314,10 @@ class BinaryTree:
     # Mirroring a binary tree means swapping left and right children of all nodes
     def mirror(self) -> None:
         """
-          Mirrors the binary tree in-place by swapping left and right subtrees.
+        Mirrors the binary tree in-place by swapping left and right subtrees.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h) — h = height of tree (recursion stack)
+        Time Complexity: O(n)
+        Space Complexity: O(h) — h = height of tree (recursion stack)
         """
         def _mirror(node: Node) -> None:
             if not node:
@@ -338,14 +338,14 @@ class BinaryTree:
     # The left subtree is a mirror reflection of the right subtree, both in shape and values.
     def is_symmetric(self) -> bool:
         """
-          Checks whether the tree is symmetric around its center.
+        Checks whether the tree is symmetric around its center.
 
-          Returns:
-              bool: True if symmetric, False otherwise.
+        Returns:
+            bool: True if symmetric, False otherwise.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h)
-          """
+        Time Complexity: O(n)
+        Space Complexity: O(h)
+        """
         def _is_mirror(n1: Node, n2: Node) -> bool:
             if not n1 and not n2:
                 return True
@@ -362,17 +362,17 @@ class BinaryTree:
 
     def lowest_common_ancestor(self, p_val: int, q_val: int) -> int:
         """
-          Finds the lowest common ancestor of two nodes in the binary tree.
+        Finds the lowest common ancestor of two nodes in the binary tree.
 
-          Args:
-              p_val (int): Value of the first node.
-              q_val (int): Value of the second node.
+        Args:
+            p_val (int): Value of the first node.
+            q_val (int): Value of the second node.
 
-          Returns:
-              int: Value of the lowest common ancestor node.
+        Returns:
+            int: Value of the lowest common ancestor node.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h)
+        Time Complexity: O(n)
+        Space Complexity: O(h)
         """
         def _lca(node: Node) -> Node:
             if not node:
@@ -396,16 +396,16 @@ class BinaryTree:
 
     def path_to_node(self, target: int) -> list[int]:
         """
-          Finds the path from root to the node with the given value.
+        Finds the path from root to the node with the given value.
 
-          Args:
-              target (int): The target node's value.
+        Args:
+            target (int): The target node's value.
 
-          Returns:
-              list[int]: List of node values from root to target. Empty if not found.
+        Returns:
+            list[int]: List of node values from root to target. Empty if not found.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h)
+        Time Complexity: O(n)
+        Space Complexity: O(h)
         """
         def _dfs_path(node: Node, path: list[int]) -> bool:
             if not node:
@@ -430,15 +430,15 @@ class BinaryTree:
 
     def max_path_sum(self) -> int:
         """
-          Calculates the maximum path sum in the binary tree.
+        Calculates the maximum path sum in the binary tree.
 
-          A path can start and end at any node.
+        A path can start and end at any node.
 
-          Returns:
-              int: The maximum path sum.
+        Returns:
+            int: The maximum path sum.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h)
+        Time Complexity: O(n)
+        Space Complexity: O(h)
         """
         self.max_sum = float('-inf')
 
@@ -466,13 +466,13 @@ class BinaryTree:
 
     def max_root_to_leaf_sum(self) -> int:
         """
-          Finds the maximum path sum from root to any leaf.
+        Finds the maximum path sum from root to any leaf.
 
-          Returns:
-              int: Maximum sum from root to leaf.
+        Returns:
+            int: Maximum sum from root to leaf.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h)
+        Time Complexity: O(n)
+        Space Complexity: O(h)
         """
         def _dfs(node: Node) -> int:
             if not node:
@@ -489,13 +489,13 @@ class BinaryTree:
 
     def min_root_to_leaf_sum(self) -> int:
         """
-          Finds the minimum path sum from root to any leaf.
+        Finds the minimum path sum from root to any leaf.
 
-          Returns:
-              int: Minimum sum from root to leaf.
+        Returns:
+            int: Minimum sum from root to leaf.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h)
+        Time Complexity: O(n)
+        Space Complexity: O(h)
         """
         def _dfs(node: Node) -> int:
             if not node:
@@ -514,13 +514,13 @@ class BinaryTree:
     
     def min_root_to_leaf_path(self) -> list[int]:
         """
-          Finds the actual path from root to leaf with the minimum sum.
+        Finds the actual path from root to leaf with the minimum sum.
 
-          Returns:
-              list[int]: List of node values representing the minimum path.
+        Returns:
+            list[int]: List of node values representing the minimum path.
 
-          Time Complexity: O(n)
-          Space Complexity: O(h)
+        Time Complexity: O(n)
+        Space Complexity: O(h)
         """
         if not self.root:
             return []
