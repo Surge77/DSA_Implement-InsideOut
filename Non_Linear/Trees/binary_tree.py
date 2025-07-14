@@ -192,9 +192,9 @@ class BinaryTree:
             return 1 + max(left_height, right_height)
 
         return _height(self.root)
-    
+        
 
-
+    # No recursion in this method just iteration + level order traversal (BFS)
     def delete(self, target: int) -> bool:
         """
         Deletes a node by value using level-order logic.
@@ -230,6 +230,8 @@ class BinaryTree:
             if current.value == target:
                 target_node = current
 
+            # In a typical binary tree each node has only reference to its children- not to its parent so you must remember parent as you traverse
+            # We append both left and right children to the queue to make sure every node is visited (level by level), so you can find both the target and the deepest rightmost node—essential for correct deletion in a general binary tree!
             if current.left:
                 parent_of_last = current
                 queue.append(current.left)
@@ -326,7 +328,7 @@ class BinaryTree:
             # Swap left and right
             node.left, node.right = node.right, node.left
 
-            # Recur on subtrees
+            # Recursion on subtrees
             _mirror(node.left)
             _mirror(node.right)
 
@@ -347,16 +349,16 @@ class BinaryTree:
         Space Complexity: O(h)
         """
         def _is_mirror(n1: Node, n2: Node) -> bool:
-            if not n1 and not n2:
+            if not n1 and not n2: # if both children of root are none it becomes symmetric and returns True
                 return True
-            if not n1 or not n2:
+            if not n1 or not n2: # If one of the children is present it becomes Asymmetric
                 return False
-            if n1.value != n2.value:
+            if n1.value != n2.value: # Both children exist, but values differ — not a mirror
                 return False
 
             return _is_mirror(n1.left, n2.right) and _is_mirror(n1.right, n2.left)
 
-        return _is_mirror(self.root.left, self.root.right) if self.root else True
+        return _is_mirror(self.root.left, self.root.right) if self.root else True # Uf the tree is empty it automatically becomes symmetric
 
 
 
@@ -376,7 +378,7 @@ class BinaryTree:
         """
         def _lca(node: Node) -> Node:
             if not node:
-                return None
+                return None # Base case: empty tree
 
             if node.value == p_val or node.value == q_val:
                 return node
