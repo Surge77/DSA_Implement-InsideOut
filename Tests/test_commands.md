@@ -33,3 +33,10 @@ You must explicitly call your test functions (as in the template I provided).
 
 This just runs file_name.py directly as a Python script, not as a module.
 
+## `python -m unittest Tests/test_file_name.py`
+
+Runs only the specific test file you mention.
+
+## `python -m unittest` 
+
+This will discover and run every test class and method in all files matching test*.py in your project and subdirectories.
