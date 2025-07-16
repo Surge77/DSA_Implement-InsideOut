@@ -38,3 +38,10 @@ After removing the min element (the root), we move the last element to the root.
 This new root might break the min-heap property: it could be larger than its children.
 
 Goal: Move it down to its correct spot so every parent is less than or equal to its children.
+
+
+### What does `Heapify` method do?
+
+Heapify takes any list of numbers and rearranges them so that they follow the rules of a max-heap—meaning every parent is bigger than its children.
+
+After heapify, the biggest number will be at the top (root), and every subtree will also be a heap. It turns a random list into a heap in one efficient process, not by inserting one at a time.
