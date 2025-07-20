@@ -319,6 +319,13 @@ class SinglyLinkedList:
 
     return -1  # Not found
   
+
+  def __iter__(self):
+    current = self.head
+    while current:
+        yield current.value
+        current = current.next
+  
   def reverse(self):
     """
     Reverses the linked list in place.
