@@ -143,3 +143,40 @@ Loop over all vertices.
 For each unvisited vertex, run BFS or DFS to mark all nodes in its component.
 
 Start a new component for each such run.
+
+
+## Graph coloring problem and bipartite graphs
+
+### Graph Coloring Problem:
+Goal: Assign colors to all vertices so that no two adjacent vertices have the same color, using the minimum number of colors.
+
+General Problem: Finding the chromatic number (minimum colors) is NP-Hard for arbitrary graphs.
+
+Example: Coloring a map so that no two neighboring countries share a color.
+
+### Bipartite Checking:
+Goal: Check if the graph can be colored with just 2 colors (like 0 and 1).
+
+If yes → graph is bipartite.
+
+If no → needs 3 or more colors → not bipartite.
+
+This is a simpler subset of the graph coloring problem.
+
+It can be solved in O(V + E) using BFS/DFS — super fast compared to general graph coloring.
+
+### Key Difference (Core Idea):
+Graph Coloring: "How many colors do I need?"
+
+Bipartite Check: "Can I do it with 2 colors only?"
+
+
+### Common Misconceptions (cm):
+- CM1: “If a graph is bipartite, then solving graph coloring is done.”
+→ Not exactly, because general graph coloring could need more than 2 colors.
+
+- CM2: “Graph coloring is always 2 colors.”
+→ No, some graphs need 3+ colors (e.g., a triangle needs 3).
+
+- CM3: “If bipartite fails, you can't color it at all.”
+→ Wrong. You can, but you need 3+ colors.

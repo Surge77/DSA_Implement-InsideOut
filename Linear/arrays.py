@@ -65,10 +65,15 @@ class MyArray:
 
     def __len__(self):
         """
+          A dunder method
           Returns the number of elements in the array.
           Time Complexity: O(1)
         """
         return self.count
+    
+
+    def __getitem__(self, index: int):
+      return self.get(index)
     
 
     def __str__(self):

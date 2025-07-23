@@ -3,6 +3,11 @@ from Linear.singly_linked_list import SinglyLinkedList as LinkedList
 
 class Graph:
     def __init__(self, num_vertices: int):
+        """
+            In this implementation we can't use our custom vertices/nodes as we know that the nodes/vertices are represented by the indices of the array so we can't define our custom nodes like 'A','B'
+
+            Array or list is Best for dense graphs with numeric vertex IDs (0..n-1).
+        """
         self.n = num_vertices  # number of vertices (0 to n-1)
         self.adj = []          # create an empty Python list
         for _ in range(num_vertices):
