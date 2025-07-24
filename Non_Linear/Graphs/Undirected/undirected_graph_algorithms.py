@@ -492,18 +492,3 @@ def find_eulerian_path(graph: Graph):
 
     return path[::-1]
 
-
-if __name__ == "__main__":
-    g = Graph(5)
-    g.add_edge(0, 1)
-    g.add_edge(1, 2)
-    g.add_edge(2, 0)
-    g.add_edge(0, 3)
-    g.add_edge(3, 4)
-
-    print("Graph:")
-    print(g)
-    print("Eulerian Status:", is_eulerian(g))
-    path = find_eulerian_path(g)
-    print("Eulerian Path:", path)
-    # Expected example output: [0, 1, 2, 0, 3, 4]
